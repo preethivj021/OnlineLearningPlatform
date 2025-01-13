@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends 'insapp/base.html' %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+      }
+      .map {
+        width: 60%; /* Adjust the width as needed */
+        height: 100%;
+      }
+      .address {
+        width: 35%; /* Adjust the width as needed */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    {% block b1 %}
+    <div class="container">
+      <div style="" class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62203.86752371989!2d77.47942184863284!3d12.988364500000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d8cacdde0c3%3A0xe2047cf1c6daffee!2sApponix%20Academy!5e0!3m2!1sen!2sin!4v1725445685717!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe
+        ><br /><br />
+      </div>
+      <div style="margin-left: 75%; margin-top: -60%" class="address">
+        <h2>Our Address</h2>
+        <p>1234 Example Street</p>
+        <p>City, State, ZIP</p>
+        <p>Country</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </div>
+
+    {% endblock b1 %}
+  </body>
+</html>
